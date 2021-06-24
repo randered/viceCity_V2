@@ -25,5 +25,6 @@ public class Rifle extends BaseGun {
         return rifleFiredBullets;
         //should fire 5 bullets
         // Some issue here fix it tomorrow.
+        // Issue was not here but in the GangNeighbourhood class.
     }
 }

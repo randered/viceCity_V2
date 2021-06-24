@@ -22,8 +22,9 @@ public class GangNeighbourhood implements Neighbourhood {
             if(!civilPlayer.isAlive()){
                 continue;
             }
+            // Fixed instead of if() Should be while() as Above, otherwise its taking lifepoints only ones and ends the loop.
             for (Gun gunModel: civilPlayer.getGunRepository().getModels()) {
-                if(mainPlayer.isAlive() && gunModel.canFire()){
+                while(mainPlayer.isAlive() && gunModel.canFire()){
                     mainPlayer.takeLifePoints(gunModel.fire());
                 }
                 if (!mainPlayer.isAlive()){
